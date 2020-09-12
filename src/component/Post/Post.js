@@ -4,6 +4,7 @@ import { Link, useHistory } from 'react-router-dom';
 
 const Post = (props) => {
   const {id, title, body, userId} = props.posts;
+
   const postStyle = {
     margin: '20px',
     padding: '20px',
@@ -22,18 +23,15 @@ const Post = (props) => {
 
   return (
     <div style={postStyle} >
-
-  <h2>{id}</h2>
-  <p>{title}</p>
-  <p>{body}</p>
-  <p>userId: {userId}</p>
+     <h2> Post ID: {id}</h2>
+     <p>Title: {title}</p>
+     <p>Body: {body}</p>
+     <p>userId: {userId}</p>
 
   {/* <Link to={`/comments/${id}`} >
    
    <Button variant="outlined"  color="primary" >Show Details {id}</Button>
   </Link> */}
-
-  <br/>
 
   <Button 
     onClick={() => handleClick(id)} 
