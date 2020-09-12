@@ -14,13 +14,9 @@ import Header from './component/Header/Header';
 
 function App() {
   return (
-
     <div>
-
-    <Header></Header>
-   
-
-    <Router>
+     <Header></Header>
+     <Router>
       <Switch>
         <Route path="/home">
           <Home></Home>
@@ -28,21 +24,16 @@ function App() {
         <Route exact path="/">
           <Home></Home>
         </Route>
-
-
         <Route path="/comments/:postId">
           <PostDetails></PostDetails>
         </Route>
-
-
         <Route path="*">
           <NoMatch></NoMatch>
-          
         </Route>
       </Switch>
     </Router>
 
-    </div>
+  </div>
   );
 }
 
